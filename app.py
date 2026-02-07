@@ -25,6 +25,27 @@ except ImportError:
 # HELPER FUNCTIONS
 # ----------------------------------------------------------------------------
 
+# def generate_pdf_report(metrics_path="bb84_metrics.json"):
+#     """Generates a PDF byte string from the metrics JSON."""
+#     if not os.path.exists(metrics_path):
+#         return None
+#     try:
+#         with open(metrics_path, "r") as f:
+#             metrics = json.load(f)
+#         pdf = FPDF()
+#         pdf.add_page()
+#         pdf.set_font("Arial", "B", 16)
+#         pdf.cell(0, 10, "Qofl-e-Noori Metrics Report", ln=True, align="C")
+#         pdf.ln(10)
+#         pdf.set_font("Arial", "", 12)
+#         for key, value in metrics.items():
+#             safe_val = str(value).encode('latin-1', 'replace').decode('latin-1')
+#             pdf.cell(0, 10, f"{key}: {safe_val}", ln=True)
+            
+#         return bytes(pdf.output(dest="S")) 
+#     except Exception as e:
+#         st.error(f"Error generating PDF: {e}")
+#         return None
 def generate_pdf_report(metrics_path="bb84_metrics.json"):
     """Generates a PDF byte string from the metrics JSON."""
     if not os.path.exists(metrics_path):
@@ -32,17 +53,29 @@ def generate_pdf_report(metrics_path="bb84_metrics.json"):
     try:
         with open(metrics_path, "r") as f:
             metrics = json.load(f)
+            
         pdf = FPDF()
         pdf.add_page()
         pdf.set_font("Arial", "B", 16)
         pdf.cell(0, 10, "Qofl-e-Noori Metrics Report", ln=True, align="C")
         pdf.ln(10)
+        
         pdf.set_font("Arial", "", 12)
         for key, value in metrics.items():
+            # Clean text for latin-1 compatibility
             safe_val = str(value).encode('latin-1', 'replace').decode('latin-1')
             pdf.cell(0, 10, f"{key}: {safe_val}", ln=True)
             
-        return bytes(pdf.output(dest="S")) 
+        # FIX: Check output type before processing
+        pdf_output = pdf.output(dest="S")
+        
+        if isinstance(pdf_output, str):
+            # If it's a string (older versions), encode it to bytes
+            return pdf_output.encode('latin-1')
+        else:
+            # If it's already bytes/bytearray (newer versions), return as is
+            return bytes(pdf_output)
+            
     except Exception as e:
         st.error(f"Error generating PDF: {e}")
         return None
@@ -87,6 +120,7 @@ st.markdown("""
 # --- Header Section ---
 col1, col2 = st.columns([3, 1])
 with col1:
+    st.title("1st Quantum Computing Hackathon")
     st.title("Qofl-e-Noori (قفلِ نوری)")
     st.title("Lock of Light")
     st.markdown("### 🌿 Secure Information by Quantum Encryption")
