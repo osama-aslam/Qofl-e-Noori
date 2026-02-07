@@ -120,7 +120,7 @@ st.markdown("""
 # --- Header Section ---
 col1, col2 = st.columns([3, 1])
 with col1:
-    st.title("1st Quantum Computing Hackathon")
+    st.title("1st Quantum Computing Hackathon - Pakistan 🇵🇰")
     st.title("Qofl-e-Noori (قفلِ نوری)")
     st.title("Lock of Light")
     st.markdown("### 🌿 Secure Information by Quantum Encryption")
