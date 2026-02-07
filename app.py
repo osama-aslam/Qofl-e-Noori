@@ -133,7 +133,7 @@ if not BACKEND_AVAILABLE:
     st.error("⚠️ Backend modules not found. Ensure 'bb84_backend' is in the python path.")
 
 # --- TABS LAYOUT ---
-tab_work, tab_team = st.tabs(["🔒 Main Work", "👥 About Team"])
+tab_work, tab_team = st.tabs(["**🔒 Main Work**", "**👥 About Team**"])
 
 # ==========================================
 # TAB 1: MAIN WORK (Encryption/Decryption)
@@ -230,12 +230,12 @@ with tab_work:
                     use_container_width=True
                 )
             
-            # ✅ METRICS PDF DOWNLOAD PRESERVED
-            st.divider()
-            if st.button("📄 Download Metrics Report (PDF)", type="secondary"):
-                pdf_bytes = generate_pdf_report()
-                if pdf_bytes:
-                    st.download_button("Click to Save PDF", pdf_bytes, "metrics.pdf", "application/pdf")
+            # # ✅ METRICS PDF DOWNLOAD PRESERVED
+            # st.divider()
+            # if st.button("📄 Download Metrics Report (PDF)", type="secondary"):
+            #     pdf_bytes = generate_pdf_report()
+            #     if pdf_bytes:
+            #         st.download_button("Click to Save PDF", pdf_bytes, "metrics.pdf", "application/pdf")
 
     # --- DECRYPTION LOGIC ---
     elif mode == "Decrypt File":
@@ -283,6 +283,12 @@ with tab_work:
                                 )
                     except Exception as e:
                         st.error(f"Error: {str(e)}")
+         # ✅ METRICS PDF DOWNLOAD PRESERVED
+            st.divider()
+            if st.button("📄 Download Metrics Report (PDF)", type="secondary"):
+                pdf_bytes = generate_pdf_report()
+                if pdf_bytes:
+                    st.download_button("Click to Save PDF", pdf_bytes, "metrics.pdf", "application/pdf")
 
 # ==========================================
 # TAB 2: ABOUT TEAM
