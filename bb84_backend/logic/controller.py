@@ -78,8 +78,8 @@ class BB84MetricsCollector:
     def add_hmac_verification(self, valid: bool):
         self.metrics["HMAC Integrity Check"] = "Passed" if valid else "Failed"
 
-    # def add_quantum_signature_status(self, enabled: bool):
-    #     self.metrics["Post-Quantum Signature"] = "Enabled" if enabled else "Disabled"
+    def add_quantum_signature_status(self, enabled: bool):
+        self.metrics["Post-Quantum Signature"] = "Enabled" if enabled else "Disabled"
 
     def export_to_json(self, output_path="bb84_metrics.json"):
         with open(output_path, "w") as f:
