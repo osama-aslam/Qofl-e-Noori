@@ -120,20 +120,20 @@ st.markdown("""
 # --- Header Section ---
 col1, col2 = st.columns([3, 1])
 with col1:
-    st.title("1st Quantum Computing Hackathon - Pakistan 🇵🇰")
+    # st.title("1st Quantum Computing Hackathon - Pakistan 🇵🇰")
     st.title("Qofl-e-Noori (قفلِ نوری)")
     st.title("Lock of Light")
     st.markdown("### 🌿 Secure Information by Quantum Encryption")
-with col2:
-    st.image("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHerTw_y5Z8sM_g8GNJnmP6Qb1arhGJjKS1g&s", width=64)
-    st.metric(label="Team Code", value="E")
-    st.caption("Powered by **PakQubit**")
+# with col2:
+#     st.image("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHerTw_y5Z8sM_g8GNJnmP6Qb1arhGJjKS1g&s", width=64)
+#     st.metric(label="Team Code", value="E")
+    st.caption("Developed by **Muhammad Osama**")
 
 if not BACKEND_AVAILABLE:
     st.error("⚠️ Backend modules not found. Ensure 'bb84_backend' is in the python path.")
 
 # --- TABS LAYOUT ---
-tab_work, tab_team = st.tabs(["**🔒 Main Work**", "**👥 About Team**"])
+tab_work, tab_team = st.tabs(["**🔒 Main Work**", "**👥 About Title**"])
 
 # ==========================================
 # TAB 1: MAIN WORK (Encryption/Decryption)
@@ -294,19 +294,20 @@ with tab_work:
 # TAB 2: ABOUT TEAM
 # ==========================================
 with tab_team:
-    st.header("About the Team")
+    # st.header("About the Team")
+    st.header("About the Title")
     col_a, col_b = st.columns(2)
-    with col_a:
-        st.markdown(f"""
-        ### 🌿 **Team PakQubit**
-        **Team Code:** `E`  
-        **Project:** Qofl-e-Noori
+    # with col_a:
+    #     st.markdown(f"""
+    #     ### 🌿 **Team PakQubit**
+    #     **Team Code:** `E`  
+    #     **Project:** Qofl-e-Noori
         
-        We are dedicated to implementing next-generation quantum security protocols 
-        to protect sensitive data against future threats.
-        """)
+    #     We are dedicated to implementing next-generation quantum security protocols 
+    #     to protect sensitive data against future threats.
+    #     """)
     with col_b:
         st.success("💡 **Did you know?**\n\n'Qofl-e-Noori' translates to **'Lock of Light'**, symbolizing the use of photons.")
 
     st.markdown("---")
-    st.info("Authorized Personnel Only | Team Code E | Secure Environment")
+    # st.info("Authorized Personnel Only | Team Code E | Secure Environment")
