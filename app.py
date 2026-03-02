@@ -124,7 +124,7 @@ with col1:
     st.title("Qofl-e-Noori (قفلِ نوری)")
     st.title("Lock of Light")
     st.markdown("### 🌿 Secure Information by Quantum Encryption")
-# with col2:
+with col2:
 #     st.image("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHerTw_y5Z8sM_g8GNJnmP6Qb1arhGJjKS1g&s", width=64)
 #     st.metric(label="Team Code", value="E")
     st.caption("Developed by **Muhammad Osama**")
