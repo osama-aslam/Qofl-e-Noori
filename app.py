@@ -306,7 +306,7 @@ with tab_team:
     #     We are dedicated to implementing next-generation quantum security protocols 
     #     to protect sensitive data against future threats.
     #     """)
-    with col_b:
+    # with col_b:
         st.success("💡 **Did you know?**\n\n'Qofl-e-Noori' translates to **'Lock of Light'**, symbolizing the use of photons.")
 
     st.markdown("---")
