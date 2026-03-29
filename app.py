@@ -97,7 +97,7 @@ def check_key_strength(key_b):
 # ----------------------------------------------------------------------------
 
 st.set_page_config(
-    page_title="Qofl-e-Noori | PakQubit",
+    page_title="Qofl-e-Noori",
     page_icon="🔒",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -123,7 +123,8 @@ with col1:
     # st.title("1st Quantum Computing Hackathon - Pakistan 🇵🇰")
     st.title("Qofl-e-Noori (قفلِ نوری)")
     st.title("Lock of Light")
-    st.markdown("### 🌿 Secure Information by Quantum Encryption")
+    # st.markdown("### 🌿 Secure Information by Quantum Encryption")
+    st.markdown("### Securing Data during Communication via Quantum Encryption")
 with col2:
 #     st.image("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHerTw_y5Z8sM_g8GNJnmP6Qb1arhGJjKS1g&s", width=64)
 #     st.metric(label="Team Code", value="E")
