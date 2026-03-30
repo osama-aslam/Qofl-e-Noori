@@ -296,7 +296,7 @@ with tab_work:
 # ==========================================
 with tab_team:
     # st.header("About the Team")
-    st.header("About the Title")
+    st.header("About the Project")
     col_a, col_b = st.columns(2)
     # with col_a:
     #     st.markdown(f"""
@@ -308,7 +308,25 @@ with tab_team:
     #     to protect sensitive data against future threats.
     #     """)
     # with col_b:
-    st.success("💡 **Did you know?**\n\n'Qofl-e-Noori' translates to **'Lock of Light'**, symbolizing the use of photons.")
+   st.success("💡 **Did you know?**\n\n'Qofl-e-Noori' translates to **'Lock of Light'**, symbolizing the use of photons.")
+
+    st.subheader("Working")
+
+    st.write("""
+    The system first uses **QKD (BB84)** to securely generate a shared secret key using quantum principles.  
+    Next, an **HMAC check** ensures the data’s integrity and authenticity before processing.  
+    Finally, the data is encrypted using **AES-256**, producing a highly secure encrypted file.
+    """)
+
+    st.image("working.png", caption="System Pipeline", use_container_width=True)
+
+    st.subheader("**Importance & Why It’s Necessary Today:**")
+    st.write("""
+    With rising cyber threats and the future risk of quantum computers breaking traditional encryption, 
+    combining quantum key distribution with strong encryption ensures long-term data security.  
+    It protects sensitive information from interception, tampering, and future decryption attacks.
+    """)
+
 
     st.markdown("---")
     # st.info("Authorized Personnel Only | Team Code E | Secure Environment")
