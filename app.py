@@ -134,7 +134,7 @@ if not BACKEND_AVAILABLE:
     st.error("⚠️ Backend modules not found. Ensure 'bb84_backend' is in the python path.")
 
 # --- TABS LAYOUT ---
-tab_work, tab_team = st.tabs(["**🔒 Main Work**", "**👥 About Title**"])
+tab_work, tab_team = st.tabs(["**🔒 Main Work**", "**👥 About Project**"])
 
 # ==========================================
 # TAB 1: MAIN WORK (Encryption/Decryption)
