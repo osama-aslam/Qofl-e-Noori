@@ -308,7 +308,7 @@ with tab_team:
     #     to protect sensitive data against future threats.
     #     """)
     # with col_b:
-   st.success("💡 **Did you know?**\n\n'Qofl-e-Noori' translates to **'Lock of Light'**, symbolizing the use of photons.")
+    st.success("💡 **Did you know?**\n\n'Qofl-e-Noori' translates to **'Lock of Light'**, symbolizing the use of photons.")
 
     st.subheader("Working")
 
